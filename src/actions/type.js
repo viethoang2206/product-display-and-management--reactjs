@@ -1,0 +1,11 @@
+export const DEC = "DECREASE";
+export const INC = "INCREASE";
+export const CHANGE_USER_NAME = "CHANGE_USER_NAME";
+export const GET_PRODUCTS = "GET_PRODUCTS";
+export const DELETE_PRODUCTS = "DELETE_PRODUCTS";
+export const EDIT_PRODUCTS = "EDIT_PRODUCTS";
+export const EDIT_PRICE = "EDIT_PRICE";
+export const SAVE_PRODUCTS = "SAVE_PRODUCTS";
+export const SAVE_PRICE = "SAVE_PRICE";
+export const CANCEL_PRICE = "CANCEL_PRICE";
+export const CANCEL_PRODUCT = "CANCEL_PRODUCT";

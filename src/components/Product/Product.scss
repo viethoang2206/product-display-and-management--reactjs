@@ -1,0 +1,34 @@
+.container {
+    margin: 0 auto;
+    max-width: 1200px;
+}
+
+.item {
+
+    .item-adj {
+        border: 1px solid black;
+        padding: 20px 20px;
+        
+        Button{
+            margin-top: 10px;
+        }
+        .cancel{
+            background-color: red;
+            border: 1px solid red;
+        }
+    }
+
+    img {
+        width: 200px;
+        height: 200px;
+    }
+
+    .pd-adj {
+        padding-bottom: 5px;
+    }
+
+    .btn-adj {
+        margin-right: 20px;
+    }
+
+}
