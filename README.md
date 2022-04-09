@@ -1,4 +1,4 @@
-#Practice project using useContext, useReducer
+# Practice project using useContext, useReducer
 
 User can delete, adjust item name and price 
 
