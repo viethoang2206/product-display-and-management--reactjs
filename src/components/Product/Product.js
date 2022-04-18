@@ -18,20 +18,37 @@ const Product = () => {
   const [getProductInfo, setProductInfo] = useState(null);
   const productRef = useRef([]);
   const priceRef = useRef([]);
+  const findItem = (id) => {
+    const item = state.status.find((val) => {
+      if (val.id === id) {
+        return val;
+      }
+    });
+    console.log(item);
+    return item.value;
+  };
+  const findPrice = (id) => {
+    const item = state.priceStatus.find((val) => {
+      if (val.id === id) {
+        return val;
+      }
+    });
+    console.log(item);
+    return item.value;
+  };
   const handleDelete = (id) => {
     dispatch({ type: DELETE_PRODUCTS, id });
   };
   const handleProduct = (id) => {
-    if (!state.status[id - 1].value) {
+    console.log(!findItem(id));
+    if (!findItem(id)) {
       dispatch({ type: EDIT_PRODUCTS, id });
-
       if (!getProductInfo) {
         setProductInfo(state.products[id - 1]);
       }
     } else {
       if (getProductInfo.id === id) {
         const input = productRef.current[id - 1].input.value;
-        console.log(productRef);
         dispatch({ type: SAVE_PRODUCTS, id, input });
       } else {
         const input = productRef.current[id - 1].input.value;
@@ -40,7 +57,7 @@ const Product = () => {
     }
   };
   const handlePrice = (id) => {
-    if (!state.priceStatus[id - 1].value) {
+    if (!findPrice(id)) {
       dispatch({ type: EDIT_PRICE, id });
       if (!priceState) {
         setPriceState(state.products[id - 1]);
